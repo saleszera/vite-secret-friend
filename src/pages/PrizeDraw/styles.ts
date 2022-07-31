@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fade = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+`;
 
 export const Footer = styled.footer`
   margin: 64px 0;
@@ -13,6 +22,8 @@ export const Text = styled.p`
 export const SecretFriendText = styled(Text)`
   color: #fe652bfc;
   font-size: 25px;
+
+  animation: ${fade} 100ms ease-in-out;
 `;
 
 export const Button = styled.button`

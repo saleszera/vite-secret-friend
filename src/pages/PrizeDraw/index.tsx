@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 
 import airplane from '../../assets/images/aviao.png';
 import { Card } from '../../components/Card';
@@ -23,6 +23,14 @@ export const PrizeDraw = () => {
     },
     [result, participant]
   );
+
+  useEffect(() => {
+    if (secretFriend) {
+      setTimeout(() => {
+        setSecretFriend('');
+      }, 5000);
+    }
+  }, [secretFriend]);
 
   return (
     <Card>

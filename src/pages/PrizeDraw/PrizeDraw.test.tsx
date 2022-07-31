@@ -1,3 +1,5 @@
+import { act } from 'react-dom/test-utils';
+
 import { fireEvent, render, screen } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 import { vi, describe, expect, it, beforeEach } from 'vitest';
@@ -55,5 +57,30 @@ describe('Raffle page', () => {
 
     const secretFriend = screen.getByRole('alert');
     expect(secretFriend).toBeInTheDocument();
+  });
+
+  it('Should be lost name of secret friend after 5 seconds', () => {
+    vi.useFakeTimers();
+
+    render(
+      <RecoilRoot>
+        <PrizeDraw />
+      </RecoilRoot>
+    );
+
+    const select = screen.getByPlaceholderText('Selecione o seu nome');
+    fireEvent.change(select, { target: { value: participants[0] } });
+
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+
+    const secretFriend = screen.getByRole('alert');
+    expect(secretFriend).toBeInTheDocument();
+
+    act(() => {
+      vi.runAllTimers();
+    });
+
+    expect(secretFriend).not.toBeInTheDocument();
   });
 });
