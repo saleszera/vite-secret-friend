@@ -1,0 +1,43 @@
+// Vitest Snapshot v1
+
+exports[`Configuration page > should be able correctly render 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ jvcWzg"
+  >
+    <section>
+      <h2>
+        Vamos começar!
+      </h2>
+      <form>
+        <div
+          class="sc-dkzDqf FPKVq"
+        >
+          <input
+            placeholder="Insira os nomes dos participantes"
+            type="text"
+            value=""
+          />
+          <button
+            disabled=""
+            type="submit"
+          >
+            Adicionar
+          </button>
+        </div>
+      </form>
+      <ul />
+      <footer
+        class="sc-gsnTZi fyijzY"
+      >
+        <button
+          disabled=""
+          type="button"
+        >
+          Iniciar brincadeira
+        </button>
+      </footer>
+    </section>
+  </div>
+</div>
+`;
