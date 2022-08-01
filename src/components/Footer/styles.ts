@@ -35,6 +35,7 @@ export const Footer = styled.footer`
     }
 
     img {
+      width: 127px;
       margin-top: 32px;
     }
   }

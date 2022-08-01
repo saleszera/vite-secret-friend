@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import bags from '../../assets/images/bags.svg';
 import { useParticipantsList } from '../../state/hooks/useParticipantsList';
 import { useSort } from '../../state/hooks/useSort';
 import { Footer as StyledFooter } from './styles';
@@ -26,6 +27,7 @@ export const Footer = () => {
       >
         Iniciar brincadeira
       </button>
+      <img src={bags} alt="shopping bags" />
     </StyledFooter>
   );
 };
