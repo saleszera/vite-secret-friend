@@ -28,7 +28,7 @@ exports[`Configuration page > should be able correctly render 1`] = `
       </form>
       <ul />
       <footer
-        class="sc-gsnTZi fyijzY"
+        class="sc-gsnTZi eVxbKh"
       >
         <button
           disabled=""
@@ -36,6 +36,10 @@ exports[`Configuration page > should be able correctly render 1`] = `
         >
           Iniciar brincadeira
         </button>
+        <img
+          alt="shopping bags"
+          src="/src/assets/images/bags.svg"
+        />
       </footer>
     </section>
   </div>

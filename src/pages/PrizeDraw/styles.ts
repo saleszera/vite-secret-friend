@@ -11,6 +11,17 @@ const fade = keyframes`
 
 export const Footer = styled.footer`
   margin: 64px 0;
+
+  img {
+    width: 150px;
+    transition: all 150ms ease-in-out;
+  }
+
+  @media screen and (max-width: 800px) {
+    img {
+      width: 125px;
+    }
+  }
 `;
 
 export const Text = styled.p`

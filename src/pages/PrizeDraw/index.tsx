@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 
-import airplane from '../../assets/images/aviao.png';
+import airplane from '../../assets/images/airplane.svg';
 import { Card } from '../../components/Card';
 import { useParticipantsList } from '../../state/hooks/useParticipantsList';
 import { useResultRaffle } from '../../state/hooks/useResultRaffle';

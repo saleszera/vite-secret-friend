@@ -1,9 +1,10 @@
-import participante from '../../assets/images/participante.png';
+import hero from '../../assets/images/hero.svg';
 import { Header as Container } from './styles';
 
 export const Header = () => (
   <Container>
-    <div role="img" aria-label="raffler logo" />
-    <img src={participante} alt="participant with a gift in your hands" />
+    <div aria-label="raffler logo" />
+
+    <img src={hero} alt="participant with a gift in your hands" />
   </Container>
 );
