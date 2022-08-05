@@ -7,14 +7,14 @@ exports[`Configuration page > should be able correctly render 1`] = `
   >
     <section>
       <h2>
-        Vamos começar!
+        configuration:start
       </h2>
       <form>
         <div
           class="sc-dkzDqf FPKVq"
         >
           <input
-            placeholder="Insira os nomes dos participantes"
+            placeholder="configuration:insertParticipantsNames"
             type="text"
             value=""
           />
@@ -22,7 +22,7 @@ exports[`Configuration page > should be able correctly render 1`] = `
             disabled=""
             type="submit"
           >
-            Adicionar
+            configuration:add
           </button>
         </div>
       </form>
@@ -34,7 +34,7 @@ exports[`Configuration page > should be able correctly render 1`] = `
           disabled=""
           type="button"
         >
-          Iniciar brincadeira
+          configuration:startGame
         </button>
         <img
           alt="shopping bags"

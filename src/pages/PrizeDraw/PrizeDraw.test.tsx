@@ -49,7 +49,7 @@ describe('Raffle page', () => {
       </RecoilRoot>
     );
 
-    const select = screen.getByPlaceholderText('Selecione o seu nome');
+    const select = screen.getByTestId('participant');
     fireEvent.change(select, { target: { value: participants[0] } });
 
     const button = screen.getByRole('button');
@@ -68,7 +68,7 @@ describe('Raffle page', () => {
       </RecoilRoot>
     );
 
-    const select = screen.getByPlaceholderText('Selecione o seu nome');
+    const select = screen.getByTestId('participant');
     fireEvent.change(select, { target: { value: participants[0] } });
 
     const button = screen.getByRole('button');

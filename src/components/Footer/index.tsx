@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 import bags from '../../assets/images/bags.svg';
@@ -8,6 +9,8 @@ import { Footer as StyledFooter } from './styles';
 
 export const Footer = () => {
   const participants = useParticipantsList();
+
+  const { t } = useTranslation();
 
   const navigate = useNavigate();
 
@@ -25,7 +28,7 @@ export const Footer = () => {
         disabled={participants.length < 3}
         onClick={handleStart}
       >
-        Iniciar brincadeira
+        {t('configuration:startGame')}
       </button>
       <img src={bags} alt="shopping bags" />
     </StyledFooter>

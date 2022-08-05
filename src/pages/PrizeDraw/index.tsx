@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import airplane from '../../assets/images/airplane.svg';
 import { Card } from '../../components/Card';
@@ -9,6 +10,8 @@ import { Button, Footer, SecretFriendText, Select, Text } from './styles';
 export const PrizeDraw = () => {
   const [participant, setParticipant] = useState('');
   const [secretFriend, setSecretFriend] = useState('');
+
+  const { t } = useTranslation();
 
   const participants = useParticipantsList();
   const result = useResultRaffle();
@@ -37,22 +40,23 @@ export const PrizeDraw = () => {
       <section>
         <form onSubmit={handleSubmit}>
           <Select
-            required
-            name="participant"
+            data-testid="participant"
             id="participant"
-            placeholder="Selecione o seu nome"
+            name="participant"
+            required
+            placeholder={t('prizeDraw:selectname')}
             value={participant}
             onChange={(event) => setParticipant(event.target.value)}
           >
-            <option>Selecione seu nome</option>
+            <option>{t('prizeDraw:selectname')}</option>
             {participants.map((participator) => (
               <option key={participator}>{participator}</option>
             ))}
           </Select>
 
-          <Text>Clique em em sortear para ver quem é seu amigo secreto!</Text>
+          <Text>{t('prizeDraw:raffleSecretFriend')}</Text>
 
-          <Button type="submit">Sortear</Button>
+          <Button type="submit">{t('prizeDraw:raffle')}</Button>
         </form>
 
         {secretFriend && (
@@ -60,7 +64,7 @@ export const PrizeDraw = () => {
         )}
 
         <Footer>
-          <img src={airplane} alt="A pic of a airplane paper" />
+          <img src={airplane} alt={t('prizeDraw:airplanePic')} />
         </Footer>
       </section>
     </Card>

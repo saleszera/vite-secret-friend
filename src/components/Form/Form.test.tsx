@@ -6,6 +6,13 @@ import { vi, describe, it } from 'vitest';
 
 import { Form } from '.';
 
+vi.mock('react-i18next', () => ({
+  ...vi.importActual('react-i18next'),
+  useTranslation: () => ({
+    t: (str: any) => str,
+  }),
+}));
+
 describe('Form behavior 🚀️', () => {
   it("shouldn't add participants if input is empty", () => {
     render(
@@ -14,9 +21,7 @@ describe('Form behavior 🚀️', () => {
       </RecoilRoot>
     );
 
-    const input = screen.getByPlaceholderText(
-      'Insira os nomes dos participantes'
-    );
+    const input = screen.getByRole('textbox');
 
     const button = screen.getByRole('button');
 
@@ -31,9 +36,7 @@ describe('Form behavior 🚀️', () => {
       </RecoilRoot>
     );
 
-    const input = screen.getByPlaceholderText(
-      'Insira os nomes dos participantes'
-    );
+    const input = screen.getByRole('textbox');
 
     const button = screen.getByRole('button');
 
@@ -56,9 +59,7 @@ describe('Form behavior 🚀️', () => {
       </RecoilRoot>
     );
 
-    const input = screen.getByPlaceholderText(
-      'Insira os nomes dos participantes'
-    );
+    const input = screen.getByRole('textbox');
 
     const button = screen.getByRole('button');
 
@@ -78,9 +79,7 @@ describe('Form behavior 🚀️', () => {
     fireEvent.click(button);
 
     const messageError = screen.getByRole('alert');
-    expect(messageError.textContent).toBe(
-      'Nomes duplicados não são permitidos!'
-    );
+    expect(messageError).toBeTruthy();
   });
 
   it('Error message should be lost after three minutes', () => {
@@ -91,9 +90,7 @@ describe('Form behavior 🚀️', () => {
       </RecoilRoot>
     );
 
-    const input = screen.getByPlaceholderText(
-      'Insira os nomes dos participantes'
-    );
+    const input = screen.getByRole('textbox');
 
     const button = screen.getByRole('button');
 

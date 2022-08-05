@@ -1,0 +1,7 @@
+{
+  "start": "¡Vamos a empezar!",
+  "insertParticipantsNames": "Ingrese los nombres de los participantes",
+  "add": "Agregar",
+  "startGame": "Empezar broma",
+  "errorMessage": "¡No se permiten nombres duplicados!"
+}
