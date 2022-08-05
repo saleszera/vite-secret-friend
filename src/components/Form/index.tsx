@@ -1,4 +1,5 @@
 import { useRef, FormEvent, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useAddParticipants } from '../../state/hooks/useAddParticipants';
 import { useErrorMessage } from '../../state/hooks/useErrorMessage';
@@ -7,6 +8,8 @@ import { Container, AlertError } from './styles';
 export const Form = () => {
   const [name, setName] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const { t } = useTranslation();
 
   const addParticipantIntoList = useAddParticipants();
   const errorMessage = useErrorMessage();
@@ -28,12 +31,12 @@ export const Form = () => {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Insira os nomes dos participantes"
+          placeholder={t('configuration:insertParticipantsNames')}
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
         <button type="submit" disabled={!name}>
-          Adicionar
+          {t('configuration:add')}
         </button>
       </Container>
       {errorMessage && <AlertError role="alert">{errorMessage}</AlertError>}

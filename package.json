@@ -33,9 +33,12 @@
     ]
   },
   "dependencies": {
+    "i18next": "^21.8.16",
+    "i18next-browser-languagedetector": "^6.1.4",
     "just-shuffle": "^4.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.3",
     "react-router-dom": "^6.3.0",
     "recoil": "^0.7.4",
     "styled-components": "^5.3.5"

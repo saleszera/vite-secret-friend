@@ -6,14 +6,16 @@ export const Header = styled.header`
   padding-top: 120px;
 
   div {
-    background-image: url('/src/assets/images/logo.svg');
-    background-repeat: no-repeat;
-    width: 351px;
-    height: 117px;
+    max-width: 351px;
+
+    img {
+      width: 100%;
+    }
   }
 
   img {
     z-index: 1;
+    image-rendering: pixelated;
   }
 
   @media screen and (max-width: 800px) {
@@ -22,9 +24,9 @@ export const Header = styled.header`
     align-items: center;
 
     div {
-      background-image: url('/src/assets/images/smallLogo.svg');
-      width: 235px;
-      height: 199px;
+      img {
+        width: 60%;
+      }
     }
   }
 `;
