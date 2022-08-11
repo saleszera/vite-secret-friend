@@ -46,3 +46,11 @@ Além das funcionalidades citadas, adicionei algumas ferramentas para padroniza�
 - [Recoil](https://recoiljs.org/docs/introduction/installation)
 
 ## Capturas de tela
+
+Aplicação:
+
+![app running](https://user-images.githubusercontent.com/54423337/184261273-5f396f28-e010-45da-b047-bbe891aa9826.gif)
+
+Tests:
+
+![tests running](https://user-images.githubusercontent.com/54423337/184260921-0ffd0720-e36a-419e-b0d0-f5075a21bdf9.gif)
